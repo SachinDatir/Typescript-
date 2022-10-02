@@ -15,6 +15,18 @@ let prom = new Promise((resolve, reject) => {
 prom.then((res) => {
     console.log(res.startsWith('Y'));
 });
+// problem  = property fname does not exist on type 'object'
+function MERGE1(objOne, objTwo) {
+    return Object.assign(objOne, objTwo);
+}
+let a112 = MERGE1({ fname: 'Pankaj' }, { age: 23 });
+// a111.fname   // property fname does not exist on type 'object'
+// HARD CODED
+function MERGE(objOne, objTwo) {
+    return Object.assign(objOne, objTwo);
+}
+let a111 = MERGE({ fname: 'Pankaj' }, { age: 23 });
+a111.fname;
 // with our mind we insert any property in object
 function Merge(objOne, objTwo) {
     return Object.assign(objOne, objTwo);
@@ -30,4 +42,5 @@ function DescribeSize(element) {
     console.log(element.size);
 }
 DescribeSize(new Map([[12, "typescript"]]));
-const a222 = 'sachin';
+const a222 = 'Skd';
+console.log(a222);

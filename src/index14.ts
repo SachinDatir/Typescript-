@@ -20,6 +20,22 @@ prom.then((res) => {
 })
 
 
+// problem  = property fname does not exist on type 'object'
+
+function MERGE1(objOne: object, objTwo: object) {
+    return Object.assign(objOne, objTwo)
+}
+let a112 = MERGE1({ fname: 'Pankaj' }, { age: 23 })
+// a111.fname   // property fname does not exist on type 'object'
+
+// HARD CODED
+function MERGE(objOne: { fname: 'Pankaj' }, objTwo: { age: 23 }) {
+    return Object.assign(objOne, objTwo)
+}
+let a111 = MERGE({ fname: 'Pankaj' }, { age: 23 })
+a111.fname
+
+
 // with our mind we insert any property in object
 function Merge<T extends Object, U extends Object>(objOne: T, objTwo: U) {
     return Object.assign(objOne, objTwo)
@@ -51,5 +67,6 @@ function DescribeSize<T extends MapAndSet>(element: T) {
 
 DescribeSize(new Map([[12, "typescript"]]))
 
-const a222='sachin'
+const a222 = 'Skd'
+console.log(a222)
 
